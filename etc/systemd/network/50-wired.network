@@ -1,0 +1,12 @@
+[Match]
+Name=enp0s31f6
+
+[Network]
+DHCP=ipv4
+
+[DHCP]
+UseDNS=false
+UseNTP=false
+
+[IPv6AcceptRA]
+UseDNS=false
