@@ -13,12 +13,10 @@ export FZF_DEFAULT_OPTS='
 	--color info:254,prompt:37,spinner:108,pointer:235,marker:235
 	--inline-info
 '
-export HISTFILE="${HOME}/.histfile"
-export HISTSIZE=1000
+export FZF_CTRL_T_COMMAND="rg --files ${HOME} /etc /usr /var"
 export PATH="${HOME}/go/bin:${PATH}"
 export PROMPT='%F{cyan}%B%40<..<%3~%b%f$(gitprompt) '
 export RPROMPT="%?"
-export SAVEHIST=1000
 export TMPDIR="/tmp"
 export VISUAL="${EDITOR}"
 export XKB_DEFAULT_OPTIONS="caps:escape"
@@ -49,6 +47,15 @@ rmqq() {
 }
 
 zle-keymap-select zle-line-init() {
+	if [[ "${TERM}" == "linux" ]]; then
+		if [[ "${KEYMAP}" == "vicmd" ]]; then
+			echo -ne "\e[?2c"					# '\e[?2c' sets cursor to _
+		elif [[ "${KEYMAP}" == "main" ]]; then  # main keymap is viins (INSERT mode)
+			echo -ne "\e[?6c"					# '\e[?6c' sets cursor to block
+		fi
+		return
+	fi
+
 	if [[ "${KEYMAP}" == "vicmd" ]]; then
 		echo -ne "\e[4 q"					# '\e[4 q' sets cursor to _
 	elif [[ "${KEYMAP}" == "main" ]]; then  # main keymap is viins (INSERT mode)
