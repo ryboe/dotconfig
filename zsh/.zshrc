@@ -14,7 +14,7 @@ export FZF_DEFAULT_OPTS='
 	--inline-info
 '
 export FZF_CTRL_T_COMMAND="rg --files ${HOME} /etc /usr /var"
-export PATH="${HOME}/go/bin:${PATH}"
+export PATH="${HOME}/go/bin:${HOME}/.cargo/bin:${PATH}"
 export PROMPT='%F{cyan}%B%40<..<%3~%b%f$(gitprompt) '
 export RPROMPT="%?"
 export TMPDIR="/tmp"
