@@ -21,7 +21,7 @@ set $menu dmenu_run
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/backgrounds/sway/arch_linux_black_3840x2160.png fill
+output * bg /usr/share/backgrounds/arch_linux_black_3840x2160.png fill
 output DP-1 pos 0,0 res 3840x2160 scale 2
 #
 # Example configuration:
