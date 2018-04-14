@@ -190,7 +190,7 @@ bindsym $mod+r mode "resize"
 bar {
 	font pango:Noto Sans Mono, FontAwesome 10
     position top
-	status_command /usr/bin/i3status-rs ~/.config/i3status/config.toml
+	status_command ~/.cargo/bin/i3status-rs ~/.config/i3status/config.toml
 
     colors {
         statusline #ffffff
