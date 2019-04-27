@@ -1,10 +1,12 @@
 [core]
-	editor = nvim
+	editor = subl -w
 	whitespace = blank-at-eof,blank-at-eol,space-before-tab,trailing-space
 
 [alias]
 	branch-author = for-each-ref --format='$(committerdate) %09 $(authorname) %09 $(refname)'
+	co = checkout
 	fetchall = fetch --all --prune --tags
+	prom = pull --rebase origin master
 	pushf = push --force-with-lease
 
 [branch]
@@ -24,4 +26,4 @@
 	email = ryanboehning@gmail.com
 
 [web]
-	browser = chrome
+	browser = firefox
